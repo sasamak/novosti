@@ -1,0 +1,31 @@
+// Массив с новостями
+const newsData = [
+    {
+        title: "First News of the Day",
+        date: "2024-10-15",
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel dui id mauris auctor facilisis."
+    },
+    {
+        title: "Second News of the Day",
+        date: "2024-10-15",
+        content: "Vestibulum euismod, nisi ac auctor scelerisque, urna lectus convallis mi, sed gravida felis lorem ac nisi."
+    }
+];
+
+// Когда страница загружается, отобразим новости
+document.addEventListener("DOMContentLoaded", () => {
+    const newsContainer = document.getElementById('news-container');
+
+    newsData.forEach(newsItem => {
+        const newsDiv = document.createElement('div');
+        newsDiv.classList.add('news-item');
+
+        newsDiv.innerHTML = 
+            <h3>${newsItem.title}</h3>
+            <p>${newsItem.date}</p>
+            <p>${newsItem.content}</p>
+        ;
+
+        newsContainer.appendChild(newsDiv);
+    });
+});
