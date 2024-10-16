@@ -1,0 +1,2 @@
+# novosti
+novosti.ru
